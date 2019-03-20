@@ -1,2 +1,25 @@
 env/*
+<<<<<<< HEAD
 .idea/*
+=======
+.idea/
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
+>>>>>>> 73688d0914b0d2228a3f9e5f50bb67287054a6a3

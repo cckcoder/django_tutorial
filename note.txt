@@ -1,0 +1,8 @@
+#Install Django
+
+1. pip install django
+
+2. django-admin startproject btre .
+
+3. Create page folder
+	 - python manage.py startapp pages
