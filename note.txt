@@ -6,3 +6,6 @@
 
 3. Create page folder
 	 - python manage.py startapp pages
+
+#Django start server.
+    - python manage.py runserver
