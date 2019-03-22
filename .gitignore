@@ -2,7 +2,7 @@ env/*
 <<<<<<< HEAD
 .idea/*
 =======
-.idea/
+/.idea
 
 ### Django ###
 *.log
@@ -11,8 +11,8 @@ env/*
 __pycache__/
 local_settings.py
 db.sqlite3
-media
-
+/media
+/static
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
