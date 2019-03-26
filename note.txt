@@ -12,3 +12,5 @@
 
 # Create pages folder
     - python manage.py startapp pages
+    - python manage.py startapp listings
+    - python manage.py startapp realtors

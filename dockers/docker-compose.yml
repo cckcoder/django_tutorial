@@ -1,0 +1,41 @@
+version: 3
+services:
+  btre_postgres:
+    container_name: btre_postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: 'btre_admin'
+      POSTGRES_PASSWORD: 'btre_proj'
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  btre_pgadmin:
+    container_name: btre_pgadmin
+    image: dpage/pgadmin4
+    links:
+      - btre_postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'admin@admin.com'
+      PGADMIN_DEFAULT_PASSWORD: 'btre_proj'
+    volumes:
+      - pgadmin:/root/.pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+
+  networks:
+    postgres:
+      driver: bridge
+
+  volumns:
+    postgres:
+    pgadmin:
